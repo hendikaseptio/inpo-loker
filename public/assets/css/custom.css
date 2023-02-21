@@ -1,0 +1,10 @@
+#banner {
+	width: 100%;
+	height: 600px;
+	display: block;
+	background-image: url('../../img/banner/banner.jpg');
+	background-position: center;
+	background-size: cover;
+	background-color: var(--bs-primary);
+	background-blend-mode: multiply;
+}
