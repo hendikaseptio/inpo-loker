@@ -103,12 +103,20 @@
 	<footer id="footer" class="py-5 bg-dark text-white">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-4">
 					<h3>Tentang Kami</h3>
 					<p><b>Inpo Loker</b> merupakan Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Laudantium cum sapiente modi illum asperiores perspiciatis quisquam, incidunt magni rerum quia. Asperiores fugiat harum iste officia non. Nihil aliquam veritatis odit.</p>
 					<p>Hak Cipta &copy; 2023 | Inpo Loker</p>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-4">
+					<h3>Kontak Kami</h3>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item bg-dark text-white"><i class="fa fa-envelope"></i> InpoLoker45@gmail.com</li>
+						<li class="list-group-item bg-dark text-white"><i class="fa fa-phone"></i> 08346-5837</li>
+						<li class="list-group-item bg-dark text-white"><i class="fa fa-map-marker-alt"></i> Kec. Ampelgading, Kabupaten Pemalang, Jawa Tengah</li>
+					</ul>
+				</div>
+				<div class="col-md-4">
 					<h3>Ikuti Kami</h3>
 					<div class="d-flex">
 						<a class="m-3 text-white fs-3" href=""><i class="fab fa-facebook"></i></a>
