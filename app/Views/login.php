@@ -15,12 +15,17 @@
 				<div class="col-md-6 col-9 m-auto">
 					<div class="card shadow-lg rounded-4">
 						<div class="card-body py-4 px-4">
-							<form action="">
+							<form action="/login/auth" method="post">
 								<div class="text-center">
 									<i class="fs-1 fa fa-handshake"></i>
 									<h1 class="text-center mb-4">INPO LOKER</h1>
 									<hr>
 								</div>
+								<?php if(session()->getFlashdata('msg')) { ?>
+									<div class="alert alert-danger">
+										<?= session()->getFlashdata('msg');?>
+									</div>
+								<?php }?>
 								<div class="mb-3">
 									<label for="username" class="form-label">Username</label>
 									<input type="text" name="username" id="username" class="form-control" placeholder="Masukkan username">
@@ -30,7 +35,7 @@
 									<input type="password" name="password" id="password" class="form-control" placeholder="Masukkan password">
 								</div>
 								<div class="d-flex justify-content-between">
-									<button type="submit" class="btn rounded-pill btn-outline-dark"><i class="fa fa-reply"></i> Kembali</button>
+									<a href="/" class="btn rounded-pill btn-outline-dark"><i class="fa fa-reply"></i> Kembali</a>
 									<button type="submit" class="shadow btn rounded-pill btn-primary"><i class="fa fa-sign-in-alt"></i> Masuk</button>
 								</div>
 							</form>

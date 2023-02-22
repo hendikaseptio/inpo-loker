@@ -18,12 +18,28 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="/">Cari Lowongan Kerja</a>
-						</li>
+						<?php if(session('is_admin')) { ?>
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page" href="/admin/dashboard"><i class="fa fa-dashboard me-2"></i>Dashboard</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page" href="/admin/perusahaan"><i class="fa fa-city me-2"></i>Data Perusahaan</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page" href="/admin/loker"><i class="fa fa-file-alt me-2"></i>Data LoKer</a>
+							</li>
+						<?php } else { ?>
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="/">Cari Lowongan Kerja</a>
+							</li>
+						<?php } ?>
 					</ul>
 					<div class="d-flex">
-						<button class="btn btn-outline-light" type="submit"><i class="fa fa-sign-in-alt"></i> Masuk</button>
+						<?php if(session('is_admin')) { ?>
+							<a href="/login/logout" class="btn btn-sm btn-outline-danger"><i class="fa fa-sign-out-alt"></i> Keluar</a>
+						<?php } else {?>
+							<a href="/login" class="btn btn-sm btn-outline-light" type="submit"><i class="fa fa-sign-in-alt"></i> Masuk</a>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
