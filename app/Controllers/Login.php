@@ -32,7 +32,7 @@ class Login extends BaseController
                     'is_admin'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/');
+                return redirect()->to('/admin/dashboard');
             }else{
                 $session->setFlashdata('msg', 'Password Salah');
                 return redirect()->to('/login');

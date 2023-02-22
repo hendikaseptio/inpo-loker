@@ -36,7 +36,7 @@
 					</ul>
 					<div class="d-flex">
 						<?php if(session('is_admin')) { ?>
-							<a href="/login/logout" class="btn btn-sm btn-outline-danger"><i class="fa fa-sign-out-alt"></i> Keluar</a>
+							<a href="/logout" class="btn btn-sm btn-outline-danger"><i class="fa fa-sign-out-alt"></i> Keluar</a>
 						<?php } else {?>
 							<a href="/login" class="btn btn-sm btn-outline-light" type="submit"><i class="fa fa-sign-in-alt"></i> Masuk</a>
 						<?php } ?>

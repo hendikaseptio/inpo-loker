@@ -31,6 +31,12 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+// untuk admin
+$routes->get('/admin/dashboard', 'Admin\Dashboard::index',['filter' => 'auth']);
+// route login
+$routes->get('/login', 'Login::index');
+$routes->get('/logout', 'Login::logout',['filter' => 'auth']);
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
