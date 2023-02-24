@@ -33,6 +33,11 @@ $routes->get('/', 'Home::index');
 
 // untuk admin
 $routes->get('/admin/dashboard', 'Admin\Dashboard::index',['filter' => 'auth']);
+// untuk crud perusahaan
+$routes->get('/admin/perusahaan', 'Admin\Perusahaan::index',['filter' => 'auth']);
+$routes->get('/admin/perusahaan/tambah', 'Admin\Perusahaan::tambah',['filter' => 'auth']);
+$routes->get('/admin/perusahaan/simpan', 'Admin\Perusahaan::simpan',['filter' => 'auth']);
+
 // route login
 $routes->get('/login', 'Login::index');
 $routes->get('/logout', 'Login::logout',['filter' => 'auth']);

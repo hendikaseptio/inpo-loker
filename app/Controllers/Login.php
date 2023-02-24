@@ -14,7 +14,7 @@ class Login extends BaseController
     {
         // generate password manual lalu copy dan paste saat menambah user di phpmyadmin
         // $pass=password_hash("passadmin", PASSWORD_DEFAULT);
-        // echo $pass;
+        // echo $pass; die;
 
         $session = session();
         $model = new \App\Models\User();
