@@ -25,7 +25,7 @@ class Perusahaan extends BaseController
         if (! $this->validateData($data, [
             'nama' => 'required|max_length[255]|min_length[3]',
             'alamat'  => 'required|max_length[5000]|min_length[10]',
-            'logo' => 'required|uploaded[logo]|mime_in[logo,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+            'logo' => 'uploaded[logo]|mime_in[logo,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
         ])) {
             // jika data input tidak valid maka arahkan ke form tambah 
             session()->setFlashdata('error',"Error");
@@ -106,5 +106,14 @@ class Perusahaan extends BaseController
             // teruskan ke halman awal perusahaan
             return redirect()->to('/admin/perusahaan');
         }
+    }
+    public function hapus($id)
+    {
+        $model = model(PerusahaanModel::class);
+        $data = $model->find($id);
+        unlink('../public/img/brand/'.$data['logo']);
+
+        $model->delete($id);
+        return redirect()->to('/admin/perusahaan')->with('success', 'Data Berhasil di Hapus');
     }
 }
